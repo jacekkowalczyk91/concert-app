@@ -25,14 +25,18 @@ class Events extends React.Component {
                 <form
                 onSubmit={this.handleSubmit}>
                     <input
-                        type='text'
-                        value={this.state.inputValue}
-                        onChange={this.handleInputChange}
-                    />
-                    <input
                         type='submit'
                         value='search'
                     />
+                    <select size='1' name='locations'>
+                        <option value='pl'>Poland</option>
+                        <option>United States</option>
+                        <option>Canada</option>
+                        <option>China</option>
+                        <option>Australia</option>
+                        <option>Spain</option>
+                        <option>France</option>
+                    </select>
                 </form>
             </div>
         )
