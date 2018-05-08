@@ -10,7 +10,7 @@ class EventsView extends React.Component {
                 {
                     this.props.eventsData && this.props.eventsData.map((event, index) => (
                         <div key={index}>
-                            <p>{event.page}</p>
+                            <div>{event.page}</div>
                         </div>
                     ))
                 }

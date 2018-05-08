@@ -5,28 +5,32 @@ import {getEvents} from "../../state/events";
 class Events extends React.Component {
 
     state = {
-        value: ''
+        inputValue: 'pl'
     }
 
     handleSubmit = event => {
         event.preventDefault()
-        this.props.getEvents(this.state.value)
+        this.props.getEvents(this.state.inputValue)
     }
 
     handleChange = event => {
-        this.setState({value: event.target.value})
+        this.setState({inputValue: event.target.value})
     }
 
     render() {
         return (
             <div>
                 <form
-                onSubmit={this.handleSubmit}>
+                    onSubmit={this.handleSubmit}>
                     <input
                         type='submit'
                         value='search'
                     />
-                    <select size='1' name='locations' onChange={this.handleChange}>
+                    {/*<input*/}
+                    {/*type='text'*/}
+                    {/*onChange={this.handleChange}*/}
+                    {/*/>*/}
+                    <select size='1' onChange={this.handleChange} value={this.state.inputValue}>
                         <option value='pl'>Poland</option>
                         <option value='us'>United States</option>
                         <option value='ca'>Canada</option>
@@ -36,13 +40,14 @@ class Events extends React.Component {
                         <option value='fr'>France</option>
                     </select>
                 </form>
-                {console.log(this.state.eventsData)}
+                {console.log(this.state.inputValue)}
             </div>
         )
     }
 }
+
 const mapDispatchToProps = dispatch => ({
-    getEvents: value => dispatch(getEvents(value))
+    getEvents: inputValue => dispatch(getEvents(inputValue))
 })
 
 const mapStateToProps = state => ({
