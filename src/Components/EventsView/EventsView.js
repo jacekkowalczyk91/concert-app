@@ -4,10 +4,11 @@ import {connect} from 'react-redux'
 class EventsView extends React.Component {
 
     render() {
-        return(
+        return (
             <div>
                 {
-                    console.log(this.props.eventsData)
+                    console.log(this.props.eventsData._embedded)
+
                 }
             </div>
         )
@@ -15,7 +16,7 @@ class EventsView extends React.Component {
 }
 
 const mapStateToProps = state => ({
-    eventsData: state.events.eventsData
+    eventsData: state.event.eventsData
 })
 
 export default connect(mapStateToProps)(EventsView)

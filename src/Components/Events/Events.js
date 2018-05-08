@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {getEvents} from "../../state/events";
+import {getEvents} from "../../state/event";
 
 class Events extends React.Component {
 
@@ -46,7 +46,7 @@ const mapDispatchToProps = dispatch => ({
 })
 
 const mapStateToProps = state => ({
-    eventsData: state.events.eventsData
+    eventsData: state.event.eventsData
 })
 
 export default connect(

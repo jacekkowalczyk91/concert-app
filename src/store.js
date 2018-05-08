@@ -1,8 +1,8 @@
 import { createStore, combineReducers, compose, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
-import events from './state/events'
+import event from './state/event'
 const reducers = combineReducers({
-    events
+    event
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
