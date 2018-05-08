@@ -11,7 +11,7 @@ export const getEvents = SearchInput => dispatch => {
     fetch(`${URL}events.json?countryCode=${SearchInput}&apikey=${APIKEY}`)
         .then(response => response.json())
         .then(data => {
-            dispatch(setEvents(data))
+            dispatch(setEvents(data.Search))
         })
 }
 

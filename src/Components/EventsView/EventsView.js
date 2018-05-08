@@ -11,10 +11,12 @@ class EventsView extends React.Component {
                     this.props.eventsData && this.props.eventsData.map((event, index) => (
                         <div key={index}>
                             <p>{event.page}</p>
-
                         </div>
                     ))
                 }
+                <div>
+                    {console.log(this.props.eventsData)}
+                </div>
             </div>
         )
     }
