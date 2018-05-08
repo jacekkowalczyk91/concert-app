@@ -26,10 +26,6 @@ class Events extends React.Component {
                         type='submit'
                         value='search'
                     />
-                    {/*<input*/}
-                    {/*type='text'*/}
-                    {/*onChange={this.handleChange}*/}
-                    {/*/>*/}
                     <select size='1' onChange={this.handleChange} value={this.state.inputValue}>
                         <option value='pl'>Poland</option>
                         <option value='us'>United States</option>
@@ -40,7 +36,6 @@ class Events extends React.Component {
                         <option value='fr'>France</option>
                     </select>
                 </form>
-                {console.log(this.state.inputValue)}
             </div>
         )
     }
