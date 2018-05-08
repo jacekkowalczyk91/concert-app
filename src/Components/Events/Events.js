@@ -36,6 +36,7 @@ class Events extends React.Component {
                         <option value='fr'>France</option>
                     </select>
                 </form>
+                {console.log(this.state.eventsData)}
             </div>
         )
     }

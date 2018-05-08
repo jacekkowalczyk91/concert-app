@@ -3,6 +3,7 @@ import { Provider } from 'react-redux'
 import { store } from './store'
 import { BrowserRouter as Router} from 'react-router-dom'
 import Events from "./Components/Events/Events";
+import EventsView from "./Components/EventsView/EventsView";
 
 class App extends Component {
   render() {
@@ -11,6 +12,7 @@ class App extends Component {
             <Router>
                 <div>
                     <Events/>
+                    <EventsView/>
                 </div>
             </Router>
         </Provider>
