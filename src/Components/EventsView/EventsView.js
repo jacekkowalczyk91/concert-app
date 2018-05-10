@@ -4,11 +4,12 @@ import {connect} from 'react-redux'
 class EventsView extends React.Component {
 
     render() {
+
+        const {eventsData} = this.props
         return (
             <div>
                 {
-                    console.log(this.props.eventsData._embedded)
-
+                    console.log(eventsData.page.size)
                 }
             </div>
         )

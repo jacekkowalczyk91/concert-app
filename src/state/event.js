@@ -16,7 +16,7 @@ export const getEvents = SearchInput => dispatch => {
 }
 
 const initialState = {
-    eventsData: {}
+    eventsData: []
 }
 
 export default (state = initialState, action) => {
