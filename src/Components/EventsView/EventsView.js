@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import './EventsView.css'
 
 class EventsView extends React.Component {
 
@@ -12,7 +13,11 @@ class EventsView extends React.Component {
                     eventsData !== null && eventsData._embedded.events.map(
                         (event, index) => (
                             <div key={index}>
-                                <h1>{event.name}</h1>
+                                <div className='events'>
+                                    <p>{event.name}</p>
+                                    <p>{event.dates.start.localDate}</p>
+                                    <p>{event.dates.start.localTime}</p>
+                                </div>
                             </div>
                         )
                     )

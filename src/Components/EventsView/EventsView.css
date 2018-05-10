@@ -1,0 +1,9 @@
+.events {
+    display: inline-block;
+    border: solid tomato 2px;
+    border-radius: 15px;
+    padding: 0 1%;
+    width: 20%;
+    margin: 2% 0;
+    float: left;
+}
