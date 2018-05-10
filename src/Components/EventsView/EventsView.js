@@ -9,7 +9,13 @@ class EventsView extends React.Component {
         return (
             <div>
                 {
-                    console.log(eventsData.page.size)
+                    eventsData !== null && eventsData._embedded.events.map(
+                        (event, index) => (
+                            <div key={index}>
+                                <h1>{event.name}</h1>
+                            </div>
+                        )
+                    )
                 }
             </div>
         )

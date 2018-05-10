@@ -9,14 +9,20 @@ const URL = `http://app.ticketmaster.com/discovery/v2/`
 
 export const getEvents = SearchInput => dispatch => {
     fetch(`${URL}events.json?countryCode=${SearchInput}&apikey=${APIKEY}`)
-        .then(response => response.json())
+        .then(response => {
+            if(response.ok){
+        return response.json()
+    }else{
+        throw new Error('Something went wrong')
+    }
+})
         .then(data => {
             dispatch(setEvents(data))
         })
 }
 
 const initialState = {
-    eventsData: []
+    eventsData: null
 }
 
 export default (state = initialState, action) => {
