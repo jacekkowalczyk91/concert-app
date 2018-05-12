@@ -17,6 +17,9 @@ class EventsView extends React.Component {
                                     <p>{event.name}</p>
                                     <p>{event.dates.start.localDate}</p>
                                     <p>{event.dates.start.localTime}</p>
+                                    <Link to={'./SingleEventView'} style={{textDecoration: 'none'}}>
+                                        <button>More info</button>
+                                    </Link>
                                 </div>
                             </div>
                         )
