@@ -1,6 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import './EventsView.css'
+import {Link} from 'react-router-dom'
+
 
 class EventsView extends React.Component {
 

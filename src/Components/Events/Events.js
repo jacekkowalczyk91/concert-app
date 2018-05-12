@@ -1,7 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {getEvents} from "../../state/event";
-import {Link} from 'react-router-dom'
 
 class Events extends React.Component {
 
