@@ -6,4 +6,9 @@
     width: 20%;
     margin: 2% 0;
     float: left;
+    height: 150px;
+}
+button {
+    border-radius: 5px;
+    margin: 0 auto;
 }
